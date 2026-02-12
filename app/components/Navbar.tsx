@@ -1,22 +1,24 @@
 import { Link, useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 
+import { IoMdHome } from "react-icons/io";
+import { IoBagHandle } from "react-icons/io5";
+
+
 export default function Navbar() {
   const { lang } = useParams();
   const { t } = useTranslation();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t">
-      <div className="flex justify-around h-14 items-center">
-        <Link to={`/${lang}/home`} className="nav-link">
-          {t("nav.home")}
+      <div className="flex w-full justify-center border-t border-gray-300 divide-x divide-gray-300 divide-solid">
+        <Link to={`/${lang}/home`} className="nav-link inline-flex items-center gap-2 py-3 px-8">
+          <IoMdHome className="w-6 h-6 text-blue-700" /> {t("nav.home")}
         </Link>
 
-        <Link to={`/${lang}/testpage1`} className="nav-link">
-          {t("nav.testpage1")}
+        <Link to={`/${lang}/testpage1`} className="nav-link inline-flex items-center gap-2 py-3 px-8">
+          <IoBagHandle className="w-6 h-6 text-green-700" /> {t("nav.testpage1")}
         </Link>
 
       </div>
-    </nav>
   );
 }

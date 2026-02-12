@@ -9,6 +9,6 @@ export default [
   ]),
   
   // Optional: Redirect root "/" to default language "/en/home"
-  route("/", "routes/redirect-to-default.tsx"),
+ // route("/", "routes/redirect-to-default.tsx"),
 
 ] satisfies RouteConfig;

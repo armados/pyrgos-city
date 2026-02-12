@@ -1,10 +1,10 @@
 import {
-  isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -51,43 +51,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-/**
- * App is the root route component
- * Renders child routes via <Outlet />
- * Language handling is done in $lang/_layout.tsx
- */
+
 export default function App() {
-  return <Outlet />;
-}
-
-/**
- * Error boundary to catch route errors
- */
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
-
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
-  }
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1 className="text-2xl font-bold">{message}</h1>
-      <p className="mt-2">{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto bg-gray-100 dark:bg-zinc-900 rounded">
-          <code>{stack}</code>
-        </pre>
+    <>
+      {/* Global Spinner or Progress Bar */}
+      {isLoading && (
+        <div className="fixed top-0 left-0 w-full h-1 bg-blue-500 animate-pulse z-50" />
       )}
-    </main>
-  );
+
+      <div className={isLoading ? "opacity-50 transition-opacity" : ""}>
+        <Outlet />
+      </div>
+    </>
+  )
 }
+
