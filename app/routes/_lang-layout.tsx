@@ -1,26 +1,37 @@
 import { Outlet, useParams, Navigate } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import i18n from "~/i18n";
 import Navbar from "~/components/Navbar";
 import LanguageSwitcher from "~/components/LanguageSwitcher";
+import ThemeSwitcher from "~/components/ThemeSwitcher";
 
 const supportedLanguages = ["en", "el"];
 
 export default function LangLayout() {
     const { lang } = useParams();
+    const [ready, setReady] = useState(false);
 
     if (!lang || !supportedLanguages.includes(lang)) {
         return <Navigate to="/en/home" replace />;
     }
 
     useEffect(() => {
-        i18n.changeLanguage(lang);
+        setReady(false);
+
+        i18n.changeLanguage(lang).then(() => {
+            setReady(true);
+        });
     }, [lang]);
 
-    return (
-        <div className="flex flex-col h-dvh overflow-hidden">
+    if (!ready) {
+        return null; // or a spinner / skeleton
+        // return <LoadingScreen />
+    }
 
+    return (
+        <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-black">
             <nav className="h-[24] border-b border-gray-200 flex items-center justify-around px-6">
+                <ThemeSwitcher />
                 <LanguageSwitcher />
             </nav>
 

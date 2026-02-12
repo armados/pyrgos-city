@@ -35,12 +35,31 @@ export const links: Route.LinksFunction = () => [
  */
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="el">
+    <html lang="el" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+
+      {/* Prevent light/dark flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  const theme = localStorage.getItem("theme");
+                  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+                  if (theme === "dark" || (theme === "system" && systemDark)) {
+                    document.documentElement.classList.add("dark");
+                  }
+                } catch (_) {}
+              })();
+            `,
+          }}
+        />
+
       </head>
       <body>
         {children}
