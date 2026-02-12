@@ -1,4 +1,4 @@
-import type { Route } from "./+types/home";
+import type { Route } from "../+types/root";
 
 import { TestPage1 } from "../pages/testpage1/testpage1";
 

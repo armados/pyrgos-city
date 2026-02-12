@@ -1,14 +1,23 @@
+import type { Route } from "../../+types/root";
+
+import { useTranslation } from "react-i18next";
+
+import type { LoaderFunction } from "react-router";
+
+export const loader: LoaderFunction = async () => null;
 
 export function TestPage1() {
+  const { t } = useTranslation();
+
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <header className="flex flex-col items-center gap-9">
           <div className="w-[500px] max-w-[100vw] p-4">
-           sdfgsdfgsdfgsdfgs test page 1
+            sdfgsdfgsdfgsdfgs test page 1
           </div>
         </header>
-       jhggfdhjkl
+        jhggfdhjkl
       </div>
     </main>
   );

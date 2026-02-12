@@ -1,0 +1,9 @@
+{
+  "nav": {
+    "home": "Home",
+    "testpage1": "Test Page 1"
+  },
+  "home": {
+    "title": "Home page"
+  }
+}

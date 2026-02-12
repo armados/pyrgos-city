@@ -9,10 +9,13 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import Navbar from "./Navbar";
 
+// Initialize i18n globally
+import "~/i18n";
 
-
+/**
+ * Supported Fonts / Links
+ */
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -26,6 +29,10 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+/**
+ * Layout component wraps the HTML shell
+ * i18n is NOT handled here — only document-level stuff
+ */
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="el">
@@ -44,13 +51,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * App is the root route component
+ * Renders child routes via <Outlet />
+ * Language handling is done in $lang/_layout.tsx
+ */
 export default function App() {
-  return <>
-      <Outlet />
-    <Navbar />
-  </>;
+  return <Outlet />;
 }
 
+/**
+ * Error boundary to catch route errors
+ */
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
@@ -69,10 +81,10 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
 
   return (
     <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
+      <h1 className="text-2xl font-bold">{message}</h1>
+      <p className="mt-2">{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className="w-full p-4 overflow-x-auto bg-gray-100 dark:bg-zinc-900 rounded">
           <code>{stack}</code>
         </pre>
       )}
