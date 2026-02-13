@@ -1,4 +1,4 @@
-import { useParams, Link, useLocation } from "react-router";
+import { useParams, useLocation } from "react-router";
 import ActionButton from "./ActionButton";
 
 export default function LanguageSwitcher() {
@@ -15,14 +15,14 @@ export default function LanguageSwitcher() {
     <nav className="flex gap-4">
       <ActionButton 
         to={getTransformedPath("en")} 
-        className={lang === 'en' ? 'font-bold' : ''}
+        className={lang === 'en' ? 'font-semibold' : ''}
       >
         English
       </ActionButton>
       
       <ActionButton 
         to={getTransformedPath("el")} 
-        className={lang === 'el' ? 'font-bold' : ''}
+        className={lang === 'el' ? 'font-semibold' : ''}
       >
         Ελληνικά
       </ActionButton>

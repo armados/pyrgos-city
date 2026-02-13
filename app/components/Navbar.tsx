@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import { IoMdHome } from "react-icons/io";
@@ -25,10 +25,6 @@ export default function Navbar() {
           <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
       </ActionButton>
 
-
-      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-2 py-3 px-8">
-          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
-      </ActionButton>
 
     </div>
   );

@@ -20,7 +20,6 @@ export default function ThemeSwitcher() {
         <div className="flex gap-2">
             {btn("light", "☀️")}
             {btn("dark", "🌙")}
-            {btn("system", "🖥️")}
         </div>
     );
 }

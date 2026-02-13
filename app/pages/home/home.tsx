@@ -26,8 +26,11 @@ export function Home() {
               className="hidden w-full dark:block"
             />
           </div>
-          Home trans: {t("home.title")}
+          
+          {t("home.title")}
+        
         </header>
+
         <div className="max-w-[300px] w-full space-y-6 px-4">
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
@@ -50,64 +53,10 @@ export function Home() {
             </ul>
           </nav>
         </div>
-<button className="
-    /* Layout & Base Style */
-    px-10 py-6 text-2xl font-bold rounded-xl
-    bg-gray-200 text-gray-800 border-2 border-gray-300
-    
-    active:bg-gray-300 
-    active:shadow-[inset_0_4px_8px_rgba(0,0,0,0.2)]
-    active:border-gray-400
-    
-    /* Smooth but instant transition */
-    transition-colors duration-75
-    select-none touch-manipulation
-">
-  PRINT RECEIPT
-</button>
-
-<button className="
-    /* Layout */
-    relative px-10 py-5 text-2xl font-black uppercase tracking-widest
-    
-    bg-orange-500 text-white rounded-2xl
-    border-b-[6px] border-orange-700
-    
-    /* Touch Interaction */
-    active:border-b-0 
-    active:translate-y-[6px]
-    active:bg-orange-600
-    
-    /* Transition */
-    transition-all duration-75
-    select-none
-">
-  Confirm Selection
-</button>
-
-        <button className="
-    /* Layout & Sizing */
-    px-8 py-4 text-2xl font-bold rounded-2xl shadow-lg
-    
-    /* Brand Colors */
-    bg-blue-600 text-white 
-    
-    /* The Animation Logic */
-    transition-all duration-75 
-    
-    /* Touch/Active States */
-    active:bg-blue-800 
-    active:scale-95 
-    active:shadow-inner
-    
-    /* Ensure no ugly tap highlight on mobile browsers */
-    select-none touch-manipulation
-">
-  START ORDER
-</button>
 
         <div className="bg-gray-300 rounded-lg my-20 min-h-[700px] p-20">dddd</div>
       </div>
+
     </main>
   );
 }
