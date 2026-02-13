@@ -20,7 +20,6 @@ export function useTheme() {
             const isDark =
                 theme === "dark" || (theme === "system" && systemDark);
 
-                console.log('Setting them to ', theme);
             root.classList.toggle("dark", isDark);
         };
 

@@ -4,6 +4,7 @@ import i18n from "~/i18n";
 import Navbar from "~/components/Navbar";
 import LanguageSwitcher from "~/components/LanguageSwitcher";
 import ThemeSwitcher from "~/components/ThemeSwitcher";
+import TextSizeController from "~/components/TextSizeController";
 
 const supportedLanguages = ["en", "el"];
 
@@ -32,6 +33,7 @@ export default function LangLayout() {
         <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-black">
             <nav className="h-[24] border-b border-gray-200 flex items-center justify-around px-6">
                 <ThemeSwitcher />
+                <TextSizeController />
                 <LanguageSwitcher />
             </nav>
 

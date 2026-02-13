@@ -1,18 +1,19 @@
 import { useTheme } from "~/hooks/useTheme";
 import type { Theme } from "~/hooks/useTheme";
+import ActionButton from "./ActionButton";
 
 export default function ThemeSwitcher() {
     const { theme, setTheme } = useTheme();
 
     const btn = (value: Theme, label: string) => (
-        <button
+        <ActionButton
             onClick={() => setTheme(value)}
             className={`px-2 ${
-                theme === value ? "bg-gray-300 rounded-md " : ""
+                theme === value ? "" : ""
             }`}
         >
             {label}
-        </button>
+        </ActionButton>
     );
 
     return (

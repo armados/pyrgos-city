@@ -4,7 +4,7 @@
 
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -45,4 +45,14 @@ body {
       @apply bg-neutral-900;
     }
   }
+
+    html {
+    font-size: 16px; /* default size */
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
 }

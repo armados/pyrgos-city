@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { IoMdHome } from "react-icons/io";
 import { IoBagHandle } from "react-icons/io5";
+import ActionButton from "./ActionButton";
 
 
 export default function Navbar() {
@@ -10,15 +11,25 @@ export default function Navbar() {
   const { t } = useTranslation();
 
   return (
-      <div className="flex w-full justify-center border-t border-gray-300 divide-x divide-gray-300 divide-solid">
-        <Link to={`/${lang}/home`} className="nav-link inline-flex items-center gap-2 py-3 px-8">
-          <IoMdHome className="w-6 h-6 text-blue-700" /> {t("nav.home")}
-        </Link>
+    <div className="flex w-full justify-center text-2xl border-t border-gray-300 divide-x divide-gray-300 divide-solid">
+      <ActionButton to={`/${lang}/home`} className="inline-flex items-center gap-2 py-3 px-8">
+          <IoMdHome className="w-6 h-6 text-blue-700" /> <span>{t("nav.home")}</span>
+      </ActionButton>
 
-        <Link to={`/${lang}/testpage1`} className="nav-link inline-flex items-center gap-2 py-3 px-8">
-          <IoBagHandle className="w-6 h-6 text-green-700" /> {t("nav.testpage1")}
-        </Link>
+      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-2 py-3 px-8">
+          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
+      </ActionButton>
 
-      </div>
+
+      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-2 py-3 px-8">
+          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
+      </ActionButton>
+
+
+      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-2 py-3 px-8">
+          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
+      </ActionButton>
+
+    </div>
   );
 }
