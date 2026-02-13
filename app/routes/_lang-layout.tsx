@@ -30,8 +30,8 @@ export default function LangLayout() {
     }
 
     return (
-        <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-black">
-            <nav className="h-[24] border-b border-gray-200 flex items-center justify-around px-6">
+        <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-neutral-800">
+            <nav className="h-[24] border-b border-gray-200 dark:border-gray-800 flex items-center justify-around px-6">
                 <ThemeSwitcher />
                 <TextSizeController />
                 <LanguageSwitcher />

@@ -54,7 +54,11 @@ export function Home() {
           </nav>
         </div>
 
-        <div className="bg-gray-300 rounded-lg my-20 min-h-[700px] p-20">dddd</div>
+        <div className="bg-red-300 dark:bg-blue-500 rounded-4xl  my-20 min-h-[700px] w-[200px] p-20">
+          
+Help1
+
+        </div>
       </div>
 
     </main>

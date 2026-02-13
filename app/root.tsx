@@ -61,7 +61,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
 
       </head>
-      <body className="select-none">
+      <body className="select-none text-black dark:text-white">
         {children}
         <ScrollRestoration />
         <Scripts />
