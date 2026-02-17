@@ -25,8 +25,7 @@ export default function LangLayout() {
     }, [lang]);
 
     if (!ready) {
-        return null; // or a spinner / skeleton
-        // return <LoadingScreen />
+        return null; // or a spinner, skeleton, return <LoadingScreen />
     }
 
     return (

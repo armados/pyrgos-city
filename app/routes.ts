@@ -1,14 +1,12 @@
 import { type RouteConfig, route, index, layout } from "@react-router/dev/routes";
 
 export default [
-  // Parent layout that captures the :lang parameter
+  route("/", "routes/root-handler.tsx"),
+
   layout("routes/_lang-layout.tsx", [
-    route(":lang/home", "routes/home.tsx"),
-    route(":lang/testpage1", "routes/testpage1.tsx"),
-    // Add other localized pages here
+    route(":lang/home", "pages/home/home.tsx"),
+    route(":lang/testpage1", "pages/testpage1/testpage1.tsx"),
+    route(":lang/testpage2", "pages/testpage2/testpage2.tsx"),
   ]),
-  
-  // Optional: Redirect root "/" to default language "/en/home"
- // route("/", "routes/redirect-to-default.tsx"),
 
 ] satisfies RouteConfig;

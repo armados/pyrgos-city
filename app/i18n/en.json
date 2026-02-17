@@ -1,9 +1,14 @@
 {
   "nav": {
     "home": "Home",
-    "testpage1": "Test Page 1"
+    "testpage1": "Test Page 1",
+            "testpage2": "Test Page 2"
+
   },
   "home": {
     "title": "Home page"
+  },
+    "testpage1": {
+    "title": "This is a test page with id 1"
   }
 }
