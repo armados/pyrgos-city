@@ -4,10 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { useNavigate } from "react-router";
 
-import type { LoaderFunction } from "react-router";
 import LazyImage from "~/components/LazyImage";
 
-export const loader: LoaderFunction = async () => null;
 
 export function meta({ }: Route.MetaArgs) {
   return [

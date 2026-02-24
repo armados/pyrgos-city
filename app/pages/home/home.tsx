@@ -2,13 +2,10 @@ import type { Route } from "../../+types/root";
 
 import { useTranslation } from "react-i18next";
 
-import type { LoaderFunction } from "react-router";
 
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
-
-export const loader: LoaderFunction = async () => null;
 
 export function meta({ }: Route.MetaArgs) {
   return [
