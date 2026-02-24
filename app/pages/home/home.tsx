@@ -59,6 +59,37 @@ export default function Home() {
       </section>
 
       <section className="mt-6">
+        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Sights & Culture</h2>
+        <div className="flex overflow-x-auto gap-3 px-4 hide-scrollbar">
+          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/30 flex items-end">
+              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
+                <span className="text-white font-extrabold text-sm">Ancient Olympia</span>
+              </div>
+            </div>
+          </div>
+          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/30 flex items-end">
+              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
+                <span className="text-white font-extrabold text-sm">Museum of Ancient Greek Technology</span>
+              </div>
+            </div>
+          </div>
+          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/30 flex items-end">
+              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
+                <span className="text-white font-extrabold text-sm">St. Nikolaos Church</span>
+              </div>
+            </div>
+          </div>
+                  </div>
+      </section>
+
+
+      <section className="mt-6">
         <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Explore by category</h2>
         <div className="flex overflow-x-auto gap-3 px-4 hide-scrollbar">
           <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
@@ -117,6 +148,26 @@ export default function Home() {
             <div className="flex-1 px-3 py-1">
               <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">Shibuya Crossing</h3>
               <p className="text-gray-500 text-xs mt-1.5 leading-tight">The pulse of the neon city.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-6">
+        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Discover Pyrgos (The Capital)</h2>
+        <div className="flex overflow-x-auto gap-3 px-4 hide-scrollbar">
+          <div className="flex min-w-[280px] bg-white p-2 rounded-[14px] shadow-sm border border-black/5 mb-1">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=200&auto=format&fit=crop" className="w-[110px] h-[110px] rounded-xl object-cover" />
+            <div className="flex-1 px-3 py-1">
+              <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">The Apollo Municipal Theater</h3>
+              <p className="text-gray-500 text-xs mt-1.5 leading-tight">One of the most important cultural landmark in Pyrgos.</p>
+            </div>
+          </div>
+          <div className="flex min-w-[280px] bg-white p-2 rounded-[14px] shadow-sm border border-black/5 mb-1">
+            <img src="https://images.unsplash.com/photo-15420518418c7-a29e0f7455ad?w=200&auto=format&fit=crop" className="w-[110px] h-[110px] rounded-xl object-cover" />
+            <div className="flex-1 px-3 py-1">
+              <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">Shopping in Pyrgos</h3>
+              <p className="text-gray-500 text-xs mt-1.5 leading-tight">Shopping in Pyrgos.</p>
             </div>
           </div>
         </div>

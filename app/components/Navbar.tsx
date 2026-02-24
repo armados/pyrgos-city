@@ -17,12 +17,12 @@ export default function Navbar() {
           <IoMdHome className="w-6 h-6 text-blue-700" /> <span>{t("nav.home")}</span>
       </ActionButton>
 
-      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-2 py-3 px-8">
-          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
+     <ActionButton to={`/${lang}/testpage2`} className="inline-flex items-center gap-2 py-3 px-8">
+          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>Information</span>
       </ActionButton>
 
-      <ActionButton to={`/${lang}/testpage2`} className="inline-flex items-center gap-2 py-3 px-8">
-          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage2")}</span>
+      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-2 py-3 px-8">
+          <IoBagHandle className="w-6 h-6 text-blue-700" /> <span>{t("nav.testpage1")}</span>
       </ActionButton>
 
 
