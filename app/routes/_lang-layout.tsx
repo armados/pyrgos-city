@@ -31,7 +31,7 @@ export default function LangLayout() {
     return (
         <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-neutral-800">
 
-            <main className="flex-1 overflow-y-auto p-2 pt-0">
+            <main className="flex-1 overflow-y-auto">
                 <Outlet />
             </main>
 

@@ -39,10 +39,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google" content="notranslate" />
         <Meta />
         <Links />
 
-      {/* Prevent light/dark flash */}
+        {/* Prevent light/dark flash */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -78,7 +79,7 @@ export default function App() {
   return (
     <>
       {/* Global Spinner or Progress Bar */}
-      {isLoading && (
+      {isLoading && false && (
         <div className="fixed top-0 left-0 w-full h-1 bg-blue-500 animate-pulse z-50" />
       )}
 

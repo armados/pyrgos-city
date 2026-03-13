@@ -21,7 +21,7 @@ type ActionButtonProps = ButtonProps | LinkProps;
 
 const baseClasses = `
   transition-all duration-75
-  active:bg-blue-500 active:scale-90 active:shadow-inner active:rounded
+  active:bg-yellow-500 active:scale-90 active:shadow-inner active:rounded
   select-none touch-manipulation
   focus:outline-none
 `;
@@ -30,12 +30,14 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
   // LINK MODE
   if ("to" in props) {
     return (
+      <div className="flex">
       <Link
         to={props.to}
         className={twMerge(baseClasses, props.className)}
       >
         {props.children}
       </Link>
+      </div>
     );
   }
 
@@ -43,6 +45,7 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
   const { children, onClick, disabled, className } = props;
 
   return (
+    <div className="flex">
     <button
       type="button"
       onClick={onClick}
@@ -57,6 +60,7 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
     >
       {children}
     </button>
+    </div>
   );
 };
 

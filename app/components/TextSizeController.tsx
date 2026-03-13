@@ -5,7 +5,7 @@ import ActionButton from "./ActionButton";
 
 const DEFAULT_SIZE = 16;
 const MIN_SIZE = 12;
-const MAX_SIZE = 28;
+const MAX_SIZE = 34;
 const STEP = 2;
 
 const STORAGE_KEY = "fontSize";
