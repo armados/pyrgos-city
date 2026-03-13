@@ -1,10 +1,13 @@
 import { useParams, useLocation } from "react-router";
 import ActionButton from "./ActionButton";
 
+import { GB, GR } from 'country-flag-icons/react/3x2'
+
+
 export default function LanguageSwitcherFlags() {
 
-  const { lang } = useParams(); 
-  const { pathname } = useLocation(); 
+  const { lang } = useParams();
+  const { pathname } = useLocation();
 
   const getTransformedPath = (newLang: string) => {
     if (!lang) return `/${newLang}/home`;
@@ -12,19 +15,19 @@ export default function LanguageSwitcherFlags() {
   };
 
   return (
-    <nav className="flex gap-4">
-      <ActionButton 
-        to={getTransformedPath("en")} 
-        className={lang === 'en' ? 'font-semibold' : ''}
+    <nav className="flex gap-x-4">
+      <ActionButton
+        to={getTransformedPath("en")}
       >
-        English
+        <GB title="English" className="w-18 rounded-md" />
+
       </ActionButton>
-      
-      <ActionButton 
-        to={getTransformedPath("el")} 
-        className={lang === 'el' ? 'font-semibold' : ''}
+
+      <ActionButton
+        to={getTransformedPath("el")}
       >
-        Ελληνικά
+        <GR title="Ελληνικά" className="w-18 rounded-md" />
+
       </ActionButton>
     </nav>
   );

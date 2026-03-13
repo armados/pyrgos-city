@@ -7,6 +7,8 @@ import ActionButton from "./ActionButton";
 import LanguageSwitcherFlags from "~/components/LanguageSwitcherFlags";
 
 import { useNavigate } from "react-router";
+import TextSizeController from "./TextSizeController";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 
 export default function PageTitleWithBackButton({ title }: { title: string }) {
@@ -27,7 +29,18 @@ export default function PageTitleWithBackButton({ title }: { title: string }) {
       </div>
 
       <div className="flex p-4 items-center ">
-                        <LanguageSwitcherFlags />
+        <ThemeSwitcher />
+      </div>
+
+      <div className="flex p-4 items-center ">
+       
+        <TextSizeController />
+     
+      </div>
+
+      <div className="flex p-4 items-center ">
+    
+        <LanguageSwitcherFlags />
       </div>
 
     </div>

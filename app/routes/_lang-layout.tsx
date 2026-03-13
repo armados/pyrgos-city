@@ -39,12 +39,6 @@ export default function LangLayout() {
                 <Navbar />
             </nav>
 
-            <nav className="h-[24] border-t border-gray-200 dark:border-gray-700 flex items-center justify-around px-6">
-                <ThemeSwitcher />
-                <TextSizeController />
-                <LanguageSwitcher />
-            </nav>
-
         </div>
     );
 }

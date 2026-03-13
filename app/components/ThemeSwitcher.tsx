@@ -8,18 +8,20 @@ export default function ThemeSwitcher() {
     const btn = (value: Theme, label: string) => (
         <ActionButton
             onClick={() => setTheme(value)}
-            className={`px-2 ${
-                theme === value ? "" : ""
-            }`}
+            className={`px-2 ${theme === value ? "" : ""
+                }`}
         >
             {label}
         </ActionButton>
     );
 
     return (
-        <div className="flex gap-2">
-            {btn("light", "☀️")}
-            {btn("dark", "🌙")}
-        </div>
+        <>
+            {theme === "light" ?
+                btn("dark", "🌙")
+                :
+                btn("light", "☀️")
+            }
+        </>
     );
 }
