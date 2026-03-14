@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 import ActionButton from "./ActionButton";
 
 
+import { MdOutlineTextFields } from "react-icons/md";
+import { MdOutlineTextIncrease } from "react-icons/md";
+import { MdOutlineTextDecrease } from "react-icons/md";
+
+
 const DEFAULT_SIZE = 16;
 const MIN_SIZE = 12;
 const MAX_SIZE = 34;
@@ -37,25 +42,25 @@ const TextSizeController: React.FC = () => {
   };
 
   return (
-    <div style={styles.wrapper} aria-label="Text size controls">
+    <div className="flex gap-2">
       <ActionButton 
         onClick={decrease}
         disabled={fontSize <= MIN_SIZE}
       >
-        A−
+        <MdOutlineTextDecrease className="w-12 h-12 text-gray-600 dark:text-gray-100 p-2" />
       </ActionButton>
 
       <ActionButton
         onClick={reset}
       >
-        Reset
+        <MdOutlineTextFields className="w-12 h-12 text-gray-600 dark:text-gray-100 p-2" />
       </ActionButton>
 
       <ActionButton
         onClick={increase}
         disabled={fontSize >= MAX_SIZE}
       >
-        A+
+        <MdOutlineTextIncrease className="w-12 h-12 text-gray-600 dark:text-gray-100 p-2" />
       </ActionButton>
     </div>
   );
@@ -63,10 +68,4 @@ const TextSizeController: React.FC = () => {
 
 export default TextSizeController;
 
-const styles: Record<string, React.CSSProperties> = {
-  wrapper: {
-    display: "flex",
-    gap: "0.5rem",
-    alignItems: "center"
-  }
-};
+

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import KioskPage from "~/components/KioskPage";
 
 
 export function meta({ }: Route.MetaArgs) {
@@ -18,7 +19,9 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <main className="mx-auto pb-10 overflow-x-hidden">
+     <KioskPage
+          title={t("home.title")}
+       className="w-full pb-10 overflow-x-hidden">
 
       <section className="relative h-[320px] w-full overflow-hidden rounded-b-[24px]">
         <img
@@ -170,7 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-    </main>
+    </KioskPage>
   );
 }
 

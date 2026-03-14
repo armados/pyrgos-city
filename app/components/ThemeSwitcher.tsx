@@ -1,26 +1,41 @@
+import { useEffect, useState } from "react";
 import { useTheme } from "~/hooks/useTheme";
 import type { Theme } from "~/hooks/useTheme";
 import ActionButton from "./ActionButton";
 
+import { IoMoon } from "react-icons/io5";
+import { IoSunny } from "react-icons/io5";
+
+
 export default function ThemeSwitcher() {
     const { theme, setTheme } = useTheme();
 
-    const btn = (value: Theme, label: string) => (
-        <ActionButton
-            onClick={() => setTheme(value)}
-            className={`px-2 ${theme === value ? "" : ""
-                }`}
-        >
-            {label}
-        </ActionButton>
-    );
+
+  useEffect(() => {
+    console.log('Changed Theme Mode:', theme);
+  }, [theme]);
+
 
     return (
         <>
             {theme === "light" ?
-                btn("dark", "🌙")
+
+                <ActionButton
+                    onClick={() => setTheme("dark")}
+                    className="p-2"
+                >
+                    <IoMoon className="size-8 text-yellow-500" />
+                </ActionButton>
+                
                 :
-                btn("light", "☀️")
+
+                <ActionButton
+                    onClick={() => setTheme("light")}
+                    className="p-2"
+                >
+                    <IoSunny className="size-8 text-yellow-300" />
+                </ActionButton>
+
             }
         </>
     );

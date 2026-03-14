@@ -19,6 +19,7 @@ export default function TestPage1() {
   return (
     <KioskPage
       title={t("testpage1.title")}
+      className="px-4 pt-16 pb-4"
     >
 
       <div className="grid grid-cols-2 gap-4">

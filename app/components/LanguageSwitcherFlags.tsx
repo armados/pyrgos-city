@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router";
 import ActionButton from "./ActionButton";
 
@@ -14,19 +15,24 @@ export default function LanguageSwitcherFlags() {
     return pathname.replace(`/${lang}`, `/${newLang}`);
   };
 
+    useEffect(() => {
+      console.log('Changed Languge:', lang);
+    }, [lang]);
+  
+
   return (
     <nav className="flex gap-x-4">
       <ActionButton
         to={getTransformedPath("en")}
       >
-        <GB title="English" className="w-18 rounded-md" />
+        <GB title="English" className="w-14 rounded" />
 
       </ActionButton>
 
       <ActionButton
         to={getTransformedPath("el")}
       >
-        <GR title="Ελληνικά" className="w-18 rounded-md" />
+        <GR title="Ελληνικά" className="w-14 rounded" />
 
       </ActionButton>
     </nav>

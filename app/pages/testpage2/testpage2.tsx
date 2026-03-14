@@ -16,6 +16,7 @@ export default function TestPage2() {
   return (
     <KioskPage
       title={t("testpage2.title")}
+            className="px-4 pt-16 pb-4"
     >
 
    page 2
