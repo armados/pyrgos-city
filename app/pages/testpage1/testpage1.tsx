@@ -33,6 +33,7 @@ export default function TestPage1() {
         overflow-hidden
         rounded-xl
         shadow-md
+        bg-blue-200
       "
     >
       <LazyImage
