@@ -34,7 +34,12 @@ export default function LazyImage({
         loading="lazy"
         onLoad={() => setLoaded(true)}
         onClick={handleOpenFullscreen}
-        className={`transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"
+        className={`transition-opacity duration-500 
+                    w-full
+          h-full
+          object-cover
+          object-center
+           ${loaded ? "opacity-100" : "opacity-0"
           }`}
       />
 

@@ -48,7 +48,7 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
     <div className="flex">
     <button
       type="button"
-      onClick={onClick}
+      onClick={onClick}      
       disabled={disabled}
       aria-disabled={disabled}
       className={twMerge(

@@ -22,18 +22,27 @@ export default function TestPage1() {
       className="px-4 pt-16 pb-4"
     >
 
-      <div className="grid grid-cols-2 gap-4">
+ 
 
-        {photos.map((photo) => (
-          <div className="w-full h-auto rounded-lg object-cover">
-            <LazyImage
-              key={photo}
-              src={new URL(`./${photo}`, import.meta.url).href}
-              allowToClickToShowInFullscreen={true}
-            />
-          </div>
-        ))}
-      </div>
+
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+  {photos.map((photo) => (
+    <div
+      key={photo}
+      className="
+        overflow-hidden
+        rounded-xl
+        shadow-md
+      "
+    >
+      <LazyImage
+        src={new URL(`./${photo}`, import.meta.url).href}
+                      allowToClickToShowInFullscreen={true}
+
+      />
+    </div>
+  ))}
+</div>
 
     </KioskPage>
   );

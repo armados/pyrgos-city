@@ -6,6 +6,7 @@ import { IoBagHandle } from "react-icons/io5";
 import ActionButton from "./ActionButton";
 
 
+
 export default function Navbar() {
   const { lang } = useParams();
   const { t } = useTranslation();
@@ -15,17 +16,17 @@ export default function Navbar() {
 
       <ActionButton to={`/${lang}/home`} className="inline-flex items-center gap-4 py-2 px-10">
         <IoMdHome className="w-6 h-6 text-blue-700" />
-        <span>{t("nav.home")}</span>
+        <h4 className="hidden md:block">{t("nav.home")}</h4>
       </ActionButton>
 
       <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-4 py-2 px-10">
         <IoBagHandle className="w-6 h-6 text-purple-500" />
-        <span>{t("nav.testpage1")}</span>
+        <h4 className="hidden md:block">{t("nav.testpage1")}</h4>
       </ActionButton>
 
       <ActionButton to={`/${lang}/testpage2`} className="inline-flex items-center gap-4 py-2 px-10">
         <IoBagHandle className="w-6 h-6 text-red-500" />
-        <span>{t("nav.testpage2")}</span>
+        <h4 className="hidden md:block">{t("nav.testpage2")}</h4>
       </ActionButton>
 
     </div>

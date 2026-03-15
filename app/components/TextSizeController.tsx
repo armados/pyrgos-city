@@ -42,25 +42,28 @@ const TextSizeController: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="flex ">
       <ActionButton 
         onClick={decrease}
         disabled={fontSize <= MIN_SIZE}
+        className="p-2"
       >
-        <MdOutlineTextDecrease className="w-12 h-12 text-gray-600 dark:text-gray-100 p-2" />
+        <MdOutlineTextDecrease className="w-6 h-6 text-black dark:text-white " />
       </ActionButton>
 
       <ActionButton
         onClick={reset}
+        className="p-2"
       >
-        <MdOutlineTextFields className="w-12 h-12 text-gray-600 dark:text-gray-100 p-2" />
+        <MdOutlineTextFields className="w-6 h-6 text-black dark:text-white" />
       </ActionButton>
 
       <ActionButton
         onClick={increase}
         disabled={fontSize >= MAX_SIZE}
+        className="p-2"
       >
-        <MdOutlineTextIncrease className="w-12 h-12 text-gray-600 dark:text-gray-100 p-2" />
+        <MdOutlineTextIncrease className="w-6 h-6 text-black dark:text-white " />
       </ActionButton>
     </div>
   );
