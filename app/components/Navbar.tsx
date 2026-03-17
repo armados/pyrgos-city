@@ -12,7 +12,7 @@ export default function Navbar() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex w-full justify-center text-2xl border-t border-stone-300 dark:border-neutral-600 divide-x divide-stone-300 dark:divide-neutral-600 divide-solid  bg-white dark:bg-black">
+    <div className="flex w-full justify-center text-xl border-t border-stone-300 dark:border-neutral-600 divide-x divide-stone-300 dark:divide-neutral-600 divide-solid  bg-white dark:bg-black">
 
       <ActionButton to={`/${lang}/home`} className="inline-flex items-center gap-4 py-2 px-10">
         <IoMdHome className="w-6 h-6 text-blue-700" />

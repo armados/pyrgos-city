@@ -16,7 +16,7 @@ export default function KioskPage({
 }) {
 
   return (
-    <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-black">
+    <div className="flex flex-col h-dvh overflow-hidden bg-white dark:bg-[#333333]">
 
       <nav className="h-20 flex place-items-stretch">
         <PageTitleWithBackButton title={title} />
@@ -28,7 +28,7 @@ export default function KioskPage({
         </main>
 
 
-      {true && <nav className="h-20 flex place-items-stretch">
+      {true && <nav className="h-14 flex place-items-stretch">
         <Navbar />
       </nav>
       }

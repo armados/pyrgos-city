@@ -24,7 +24,7 @@ export default function PageTitleWithBackButton({ title }: { title: string }) {
   const currentPage = location.pathname.split("/")[2];
 
   return (
-    <div className="flex w-full justify-around border-b border-stone-300 dark:border-neutral-600 divide-x divide-gray-300 dark:divide-neutral-600 divide-solid bg-white dark:bg-black">
+    <div className="flex w-full justify-around border-b border-stone-300 dark:border-neutral-600 divide-x divide-gray-300 dark:divide-neutral-600 divide-solid bg-[#f6f6f6] dark:bg-[#181818]">
 
       {currentPage != 'home' && <>
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { IoClose } from "react-icons/io5";
+import { RiArrowGoBackFill } from "react-icons/ri";
+import { TbZoomInArea } from "react-icons/tb";
 
 type LazyImageProps = {
   src: string;
@@ -28,34 +29,43 @@ export default function LazyImage({
   return (
     <>
       {/* Normal lazy-loaded image */}
-      <img
-        src={src}
-        alt={alt ?? ""}
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        onClick={handleOpenFullscreen}
-        className={`transition-opacity duration-500 
-                    w-full
-          h-full
-          object-cover
-          object-center
-           ${loaded ? "opacity-100" : "opacity-0"
-          }`}
-      />
+<div className="relative w-full h-full">
+  <img
+    src={src}
+    alt={alt ?? ""}
+    loading="lazy"
+    onLoad={() => setLoaded(true)}
+    onClick={handleOpenFullscreen}
+    className={`transition-opacity duration-500
+      w-full
+      h-full
+      object-cover
+      object-center
+      cursor-${fullscreen ? "zoom-in" : "default"}
+      ${loaded ? "opacity-100" : "opacity-0"}
+    `}
+  />
+
+  {fullscreen && (
+    <TbZoomInArea
+      className="absolute bottom-2 right-2 size-10 text-white dark:text-white rounded p-2 pointer-events-none"
+    />
+  )}
+</div>
 
       {/* Fullscreen overlay */}
       {fullscreen && isFullscreen && (
         <div
-          className="fixed inset-0 z-50 bg-white/95 dark:bg-black/95 flex items-center justify-center animate-fade-in p-4"
+          className="fixed inset-0 z-50 bg-[#f6f6f6]/90 dark:bg-[#181818]/90 flex items-center justify-center animate-fade-in p-4"
           onClick={handleCloseFullscreen}
 
         >
           {/* Close Button */}
-          {false && <button
+          {<button
             onClick={handleCloseFullscreen}
-            className="absolute top-4 right-8 text-white text-3xl p-2 rounded-full bg-black/50 dark:bg-white/50"
+            className="absolute top-4 right-6 "
           >
-            <IoClose />
+            <RiArrowGoBackFill className="text-black dark:text-white size-14 p-2 bg-[#f6f6f6] dark:bg-[#181818] border border-stone-600 dark:border-stone-400  rounded-xl " />
           </button>
           }
 

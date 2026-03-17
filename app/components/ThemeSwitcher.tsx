@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
                     onClick={() => setTheme("dark")}
                     className="p-2"
                 >
-                    <IoMoon className="w-6 h-6 text-blue-600" />
+                    <IoSunny className="w-6 h-6 text-yellow-600" />
                 </ActionButton>
                 
                 :
@@ -33,7 +33,7 @@ export default function ThemeSwitcher() {
                     onClick={() => setTheme("light")}
                     className="p-2"
                 >
-                    <IoSunny className="w-6 h-6 text-yellow-300" />
+                    <IoMoon className="w-6 h-6 text-cyan-400" />
                 </ActionButton>
 
             }

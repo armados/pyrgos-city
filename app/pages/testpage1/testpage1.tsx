@@ -1,5 +1,7 @@
 import type { Route } from "../../+types/root";
 import { useTranslation } from "react-i18next";
+import Heading2 from "~/components/Heading2";
+import Image from "~/components/Image";
 import KioskPage from "~/components/KioskPage";
 import LazyImage from "~/components/LazyImage";
 
@@ -23,7 +25,12 @@ export default function TestPage1() {
     >
 
 
+      <Heading2>Εικόνα</Heading2>
 
+      <img src="/images/logo-dimos-pyrgou1.png"  />
+
+
+      <Heading2>Photo gallery</Heading2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
         {photos.map((photo) => (
