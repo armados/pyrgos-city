@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, type To } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
 type BaseProps = {
@@ -14,7 +14,7 @@ type ButtonProps = BaseProps & {
 };
 
 type LinkProps = BaseProps & {
-  to: string;
+  to: To;
 };
 
 type ActionButtonProps = ButtonProps | LinkProps;
@@ -32,7 +32,7 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
     return (
       <div className="flex">
       <Link
-        to={props.to}
+        to={props.to  ?? '/'}
         className={twMerge(baseClasses, props.className)}
       >
         {props.children}

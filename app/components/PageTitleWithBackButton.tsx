@@ -24,7 +24,7 @@ export default function PageTitleWithBackButton({ title }: { title: string }) {
   const currentPage = location.pathname.split("/")[2];
 
   return (
-    <div className="flex w-full justify-around border-b border-stone-300 dark:border-stone-600 divide-x divide-gray-300 dark:divide-stone-600 divide-solid bg-white dark:bg-stone-700">
+    <div className="flex w-full justify-around border-b border-stone-300 dark:border-neutral-600 divide-x divide-gray-300 dark:divide-neutral-600 divide-solid bg-white dark:bg-black">
 
       {currentPage != 'home' && <>
 
@@ -44,15 +44,15 @@ export default function PageTitleWithBackButton({ title }: { title: string }) {
         <h3 className="truncate">{title}</h3>
       </div>
 
-      <div className="flex p-4 items-center ">
+      <div className="flex py-2 px-8 items-center ">
         <LanguageSwitcherFlags />
       </div>
 
-      <div className="flex p-4 items-center ">
+      <div className="flex py-2 px-8 items-center ">
         <TextSizeController />
       </div>
 
-      <div className="flex p-4 items-center ">
+      <div className="flex py-2 px-8 items-center ">
         <ThemeSwitcher />
       </div>
 
