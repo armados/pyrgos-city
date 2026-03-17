@@ -11,9 +11,9 @@ export default function TestPage1() {
   const { t } = useTranslation();
 
   const photos = [
-    'file1.jpg',
-    'file2.jpg',
-    'file3.jpg'
+    '/images/file1.jpg',
+    '/images/file2.jpg',
+    '/images/file3.jpg'
   ];
 
   return (
@@ -22,28 +22,28 @@ export default function TestPage1() {
       className="px-4 pt-16 pb-4"
     >
 
- 
 
 
-<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
-  {photos.map((photo) => (
-    <div
-      key={photo}
-      className="
+
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+        {photos.map((photo) => (
+          <div
+            key={photo}
+            className="
         overflow-hidden
         rounded-xl
         shadow-md
         bg-blue-200
       "
-    >
-      <LazyImage
-        src={new URL(`./${photo}`, import.meta.url).href}
-                      allowToClickToShowInFullscreen={true}
+          >
+            <LazyImage
+              src={photo}
+              fullscreen
 
-      />
-    </div>
-  ))}
-</div>
+            />
+          </div>
+        ))}
+      </div>
 
     </KioskPage>
   );

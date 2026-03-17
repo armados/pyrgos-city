@@ -22,15 +22,11 @@ export default function KioskPage({
         <PageTitleWithBackButton title={title} />
       </nav>
 
-      <main className="flex-1 overflow-y-auto custom-no-scrollbar">
-
-        <main className="flex flex-col items-center justify-center">
-          <div className={cn("flex-1 flex flex-col w-full min-h-0 ", className)}>
+ 
+        <main className={cn("flex-1 overflow-y-auto custom-no-scrollbar", className)}>
             {children}
-          </div>
         </main>
 
-      </main>
 
       {true && <nav className="h-20 flex place-items-stretch">
         <Navbar />

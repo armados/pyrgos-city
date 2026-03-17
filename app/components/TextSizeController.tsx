@@ -8,10 +8,10 @@ import { MdOutlineTextIncrease } from "react-icons/md";
 import { MdOutlineTextDecrease } from "react-icons/md";
 
 
-const DEFAULT_SIZE = 16;
-const MIN_SIZE = 12;
+const DEFAULT_SIZE = 18;
+const MIN_SIZE = 14;
 const MAX_SIZE = 34;
-const STEP = 2;
+const STEP = 4;
 
 const STORAGE_KEY = "fontSize";
 

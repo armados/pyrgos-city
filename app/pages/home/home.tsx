@@ -2,9 +2,6 @@ import type { Route } from "../../+types/root";
 
 import { useTranslation } from "react-i18next";
 
-
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
 import KioskPage from "~/components/KioskPage";
 
 export const speakText = (text: string, lang: string) => {
@@ -15,9 +12,7 @@ export const speakText = (text: string, lang: string) => {
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "Home page56789" },
-    { name: "description", content: "Welcome to home page345678!" },
-  ];
+     ];
 }
 
 export default function Home() {
@@ -30,7 +25,7 @@ export default function Home() {
 
       <section className="relative h-[320px] w-full overflow-hidden rounded-b-[24px]">
         <img
-          src={new URL(`./file1.jpg`, import.meta.url).href}
+          src="/images/file1.jpg"
           alt="Pyrgos"
           className="absolute inset-0 w-full h-full object-cover"
         />
