@@ -56,7 +56,7 @@ export default function LazyImage({
       {/* Fullscreen overlay */}
       {fullscreen && isFullscreen && (
         <div
-          className="fixed inset-0 z-50 bg-[#f6f6f6]/90 dark:bg-[#181818]/90 flex items-center justify-center animate-fade-in p-4"
+          className="fixed inset-0 z-50 bg-[#f6f6f6] dark:bg-[#181818] flex items-center justify-center animate-fade-in p-4"
           onClick={handleCloseFullscreen}
 
         >
@@ -65,7 +65,7 @@ export default function LazyImage({
             onClick={handleCloseFullscreen}
             className="absolute top-4 right-6 "
           >
-            <RiArrowGoBackFill className="text-black dark:text-white size-14 p-2 bg-[#f6f6f6] dark:bg-[#181818] border border-stone-600 dark:border-stone-400  rounded-xl " />
+            <RiArrowGoBackFill className="text-black dark:text-white size-14 p-2 bg-white dark:bg-[#333333] border border-stone-600 dark:border-stone-400  rounded-xl " />
           </button>
           }
 

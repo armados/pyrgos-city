@@ -15,7 +15,7 @@ const Heading2: React.FC<Heading2Props> = ({
 
   return (
 
-    <h2 className={twMerge("text-2xl font-bold mb-4", className)}>
+    <h2 className={twMerge("text-xl font-semibold mt-2 mb-4 text-cyan-800 ", className)}>
       {children}
     </h2>
   );

@@ -21,7 +21,7 @@ type ActionButtonProps = ButtonProps | LinkProps;
 
 const baseClasses = `
   transition-all duration-75
-  active:bg-yellow-500 active:scale-90 active:shadow-inner active:rounded
+  active:bg-yellow-500 active:scale-90 active:shadow-inner 
   select-none touch-manipulation
   focus:outline-none
 `;

@@ -27,7 +27,7 @@ export default function TestPage1() {
 
       <Heading2>Εικόνα</Heading2>
 
-      <img src="/images/logo-dimos-pyrgou1.png"  />
+      <img className="rounded bg-white p-2" src="/images/logo-dimos-pyrgou1.png"  />
 
 
       <Heading2>Photo gallery</Heading2>

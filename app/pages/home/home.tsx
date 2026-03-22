@@ -1,7 +1,6 @@
 import type { Route } from "../../+types/root";
-
 import { useTranslation } from "react-i18next";
-
+import ActionButton from "~/components/ActionButton";
 import KioskPage from "~/components/KioskPage";
 
 export const speakText = (text: string, lang: string) => {
@@ -11,171 +10,151 @@ export const speakText = (text: string, lang: string) => {
 };
 
 export function meta({ }: Route.MetaArgs) {
-  return [
-     ];
+  return [];
 }
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const categories = [
+    { title: "Η Πόλη μου", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Σημεία Ενδιαφέροντος", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Αξιοθέατα", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Αγορές", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Παραλίες", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Φαγητό", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Τοπικά Προϊόντα", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Μεταφορές", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Χρήσιμα Τηλέφωνα", image: "/images/plakes-01-300x225.jpg" },
+
+  ];
 
   return (
     <KioskPage
       title={t("home.title")}
-      className="w-full pb-10 overflow-x-hidden">
+      className="w-full pb-10 mb-8"
+    >
 
-      <section className="relative h-[320px] w-full overflow-hidden rounded-b-[24px]">
-        <img
-          src="/images/file1.jpg"
-          alt="Pyrgos"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/30"></div>
+ 
 
-        <div className="absolute bottom-6 left-5 right-5">
-          <h1 className="text-white text-4xl font-extrabold tracking-tight">Κατάκολο</h1>
-          <p className="text-blue-100 mt-1.5 text-sm font-medium">Καλωσήρθατε στο λιμάνι Κατακόλου.</p>
-          <button className="mt-4 bg-[#7c5cff] text-white px-[18px] py-3 rounded-[14px] font-bold shadow-[0_10px_20px_-5px_rgba(124,92,255,0.4)] active:scale-95 transition-transform">
-            Explore the city
-          </button>
-        </div>
-      </section>
+<div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-7xl mx-auto px-4 mt-8">
+  
+  {/* FIRST COLUMN (1/3 Width) */}
+  <div className="md:col-span-4 bg-white rounded-2xl shadow-md p-6 md:p-8">
 
-      <section className="mt-6">
-        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3 [text-shadow:1px_1px_5px_rgba(143,143,143,0.3)]">Αξιοθέατα</h2>
-        <div className="flex overflow-x-auto gap-3 px-4 custom-no-scrollbar">
-          <div className="min-w-[160px] bg-[#efefef] p-3 rounded-xl shadow-sm border border-black/5">
-            <p className="font-bold text-[#0b1b3a]">Cyber Districts</p>
-            <p className="text-gray-500 text-xs mt-1.5">Vibrant neon alleys</p>
-          </div>
-          <div className="min-w-[160px] bg-[#efefef] p-3 rounded-xl shadow-sm border border-black/5">
-            <p className="font-bold text-[#0b1b3a]">High-Speed Rail</p>
-            <p className="text-gray-500 text-xs mt-1.5">Across the skyline</p>
-          </div>
-          <div className="min-w-[160px] bg-[#efefef] p-3 rounded-xl shadow-sm border border-black/5">
-            <p className="font-bold text-[#0b1b3a]">Zen Gardens</p>
-            <p className="text-gray-500 text-xs mt-1.5">Quiet amidst chaos</p>
-          </div>
-        </div>
-      </section>
+<div className="max-w-md  bg-white/50 ">
+  <h1 className="text-4xl font-extrabold text-blue-900  mb-4">
+    Your Adventure <br/> 
+    <span className="text-cyan-600 italic">Starts Here!</span>
+  </h1>
 
-      <section className="mt-6">
-        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Sights & Culture</h2>
-        <div className="flex overflow-x-auto gap-3 px-4 custom-no-scrollbar">
-          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-end">
-              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
-                <span className="text-white font-extrabold text-sm">Ancient Olympia</span>
-              </div>
+  <p className="text-lg text-slate-700 leading-relaxed mb-8">
+    Welcome to Katakolo! To help you make the most of your visit, we’ve gathered everything you need in one place. 
+  </p>
+
+  <ul className="space-y-4">
+    <li className="flex items-start gap-3">
+      <div className="mt-1 bg-blue-100 p-1 rounded-full">
+        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
+      </div>
+      <p className="text-slate-700"><span className="font-bold text-blue-800">Explore</span> our landmarks and local history.</p>
+    </li>
+    
+    <li className="flex items-start gap-3">
+      <div className="mt-1 bg-blue-100 p-1 rounded-full">
+        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
+      </div>
+      <p className="text-slate-700"><span className="font-bold text-blue-800">Relax</span> at the best nearby beaches.</p>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <div className="mt-1 bg-blue-100 p-1 rounded-full">
+        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
+      </div>
+      <p className="text-slate-700"><span className="font-bold text-blue-800">Taste</span> fresh seafood and traditional products.</p>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <div className="mt-1 bg-blue-100 p-1 rounded-full">
+        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
+      </div>
+      <p className="text-slate-700"><span className="font-bold text-blue-800">Navigate</span> with ease using transport and contact info.</p>
+    </li>
+  </ul>
+
+  <div className="mt-10 pt-6 border-t border-slate-200">
+    <p className="text-sm font-medium text-slate-500 uppercase tracking-widest flex items-center gap-2">
+      Tap a category to begin 
+      <svg className="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="arrow-right"></path></svg>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+  </div>
+
+  {/* SECOND COLUMN (2/3 Width) */}
+  <div className="md:col-span-8 ">
+ 
+ 
+
+
+   {/* GRID */}
+      <div className="max-w-7xl mx-auto  grid grid-cols-2 md:grid-cols-3  gap-6">
+        {categories.map((item, index) => (
+          <ActionButton
+            key={index}
+            onClick={() => speakText(item.title, i18n.language)}
+            className="
+        group relative flex flex-col overflow-hidden rounded-xl bg-white
+        h-[140px] md:h-[200px] 
+       
+        shadow
+      "
+          >
+            {/* IMAGE CONTAINER */}
+            <div className="relative h-full w-full overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-full w-full object-cover "
+              />
+              {/* Subtle overlay to keep focus on the image quality */}
+              {false && <div className="absolute inset-0 bg-white/10" />}
             </div>
-          </div>
-          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-end">
-              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
-                <span className="text-white font-extrabold text-sm">Museum of Ancient Greek Technology</span>
-              </div>
+
+            {/* LABEL BOTTOM BAR */}
+            <div className="absolute bottom-0 w-full bg-[#326599] py-3 px-4">
+              <h2 className="text-white text-base md:text-lg font-bold truncate leading-tight">
+                {item.title}
+              </h2>
             </div>
-          </div>
-          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-end">
-              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
-                <span className="text-white font-extrabold text-sm">St. Nikolaos Church</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+          </ActionButton>
+        ))}
+      </div>
 
 
-      <section className="mt-6">
-        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Explore by category</h2>
-        <div className="flex overflow-x-auto gap-3 px-4 custom-no-scrollbar">
-          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-end">
-              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
-                <span className="text-white font-extrabold text-sm">Fine Dining</span>
-              </div>
-            </div>
-          </div>
-          <div className="relative min-w-[200px] h-[140px] rounded-[14px] overflow-hidden shadow-md shrink-0">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-end">
-              <div className="bg-black/30 w-full p-2 backdrop-blur-sm">
-                <span className="text-white font-extrabold text-sm">Tech Hubs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="mt-6 px-4">
-        <h2 className="text-lg font-bold text-[#0b1b3a] mb-3">Map preview</h2>
-        <div className="relative h-[140px] rounded-xl overflow-hidden cursor-pointer group">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center group-hover:bg-slate-900/40 transition-colors">
-            <span className="text-white font-bold text-base">Open full map</span>
-          </div>
-        </div>
-      </section>
 
-      <section className="mt-6 px-4">
-        <h2 className="text-lg font-extrabold text-[#0b1b3a] mb-3">Plan your day</h2>
-        <div className="flex gap-3">
-          <button
-            onMouseDown={() => speakText("Hello Dimitris", "en-US")}
-            className="flex-1 bg-[#2dd4bf] py-3.5 rounded-xl font-bold text-[#052e2d] active:opacity-80">
-            Create a123
-          </button>
-          <button className="flex-1 bg-white border border-[#e6e9f2] py-3.5 rounded-xl font-bold text-[#0b1b3a] active:bg-gray-50">
-            Nearby restaurants
-          </button>
-        </div>
-      </section>
 
-      <section className="mt-6">
-        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Explore by place</h2>
-        <div className="flex overflow-x-auto gap-3 px-4 custom-no-scrollbar">
-          <div className="flex min-w-[280px] bg-white p-2 rounded-[14px] shadow-sm border border-black/5 mb-1">
-            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=200&auto=format&fit=crop" className="w-[110px] h-[110px] rounded-xl object-cover" />
-            <div className="flex-1 px-3 py-1">
-              <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">Akihabara Station</h3>
-              <p className="text-gray-500 text-xs mt-1.5 leading-tight">World's busiest electronics district.</p>
-            </div>
-          </div>
-          <div className="flex min-w-[280px] bg-white p-2 rounded-[14px] shadow-sm border border-black/5 mb-1">
-            <img src="https://images.unsplash.com/photo-15420518418c7-a29e0f7455ad?w=200&auto=format&fit=crop" className="w-[110px] h-[110px] rounded-xl object-cover" />
-            <div className="flex-1 px-3 py-1">
-              <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">Shibuya Crossing</h3>
-              <p className="text-gray-500 text-xs mt-1.5 leading-tight">The pulse of the neon city.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="mt-6">
-        <h2 className="px-4 text-lg font-bold text-[#0b1b3a] mb-3">Discover Pyrgos (The Capital)</h2>
-        <div className="flex overflow-x-auto gap-3 px-4 custom-no-scrollbar">
-          <div className="flex min-w-[280px] bg-white p-2 rounded-[14px] shadow-sm border border-black/5 mb-1">
-            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=200&auto=format&fit=crop" className="w-[110px] h-[110px] rounded-xl object-cover" />
-            <div className="flex-1 px-3 py-1">
-              <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">The Apollo Municipal Theater</h3>
-              <p className="text-gray-500 text-xs mt-1.5 leading-tight">One of the most important cultural landmark in Pyrgos.</p>
-            </div>
-          </div>
-          <div className="flex min-w-[280px] bg-white p-2 rounded-[14px] shadow-sm border border-black/5 mb-1">
-            <img src="https://images.unsplash.com/photo-15420518418c7-a29e0f7455ad?w=200&auto=format&fit=crop" className="w-[110px] h-[110px] rounded-xl object-cover" />
-            <div className="flex-1 px-3 py-1">
-              <h3 className="font-extrabold text-[#1f4083] [text-shadow:1px_2px_1px_rgba(0,0,0,0.05)]">Shopping in Pyrgos</h3>
-              <p className="text-gray-500 text-xs mt-1.5 leading-tight">Shopping in Pyrgos.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
+
+
+  </div>
+
+</div>
+
+
+   
+
 
     </KioskPage>
   );
 }
-

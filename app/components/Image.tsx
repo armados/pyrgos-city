@@ -24,7 +24,7 @@ const Image: React.FC<ImageProps> = ({
 
   return (
 
-    <div className={twMerge("w-1/3 m-4 overflow-hidden rounded-xl shadow-md bg-[#BDC7E2] dark:bg-[#3D6891]", floatLeft && "float-left", floatRight && "float-right", center && "mx-auto")}>
+    <div className={twMerge("w-1/3 m-4 overflow-hidden rounded-xl shadow-md text-white bg-[#326599] dark:bg-[#3D6891]", floatLeft && "float-left", floatRight && "float-right", center && "mx-auto")}>
       <div className="aspect-video flex items-center justify-center ">
         <LazyImage
           src={src}

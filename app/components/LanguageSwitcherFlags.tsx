@@ -25,14 +25,14 @@ export default function LanguageSwitcherFlags() {
       <ActionButton
         to={getTransformedPath("en")}
       >
-        <GB title="English" className="w-14 rounded" />
+        <GB title="English" className="w-6 md:w-14 " />
 
       </ActionButton>
 
       <ActionButton
         to={getTransformedPath("el")}
       >
-        <GR title="Ελληνικά" className="w-14 rounded" />
+        <GR title="Ελληνικά" className="w-6 md:w-14 " />
 
       </ActionButton>
     </nav>

@@ -29,6 +29,11 @@ export default function Navbar() {
         <h4 className="hidden md:block">{t("nav.testpage2")}</h4>
       </ActionButton>
 
+      <ActionButton to={`/${lang}/kotsanas`} className="inline-flex items-center gap-4 py-2 px-10">
+        <IoBagHandle className="w-6 h-6 text-red-500" />
+        <h4 className="hidden md:block">kotsanas</h4>
+      </ActionButton>
+
     </div>
   );
 }

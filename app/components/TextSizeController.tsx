@@ -8,10 +8,10 @@ import { MdOutlineTextIncrease } from "react-icons/md";
 import { MdOutlineTextDecrease } from "react-icons/md";
 
 
-const DEFAULT_SIZE = 18;
+const DEFAULT_SIZE = 14;
 const MIN_SIZE = 14;
-const MAX_SIZE = 34;
-const STEP = 4;
+const MAX_SIZE = 22;
+const STEP = 2;
 
 const STORAGE_KEY = "fontSize";
 
@@ -48,14 +48,14 @@ const TextSizeController: React.FC = () => {
         disabled={fontSize <= MIN_SIZE}
         className="p-2"
       >
-        <MdOutlineTextDecrease className="w-6 h-6 text-black dark:text-white " />
+        <MdOutlineTextDecrease className="w-6 h-6 text-white " />
       </ActionButton>
 
       <ActionButton
         onClick={reset}
         className="p-2"
       >
-        <MdOutlineTextFields className="w-6 h-6 text-black dark:text-white" />
+        <MdOutlineTextFields className="w-6 h-6 text-white" />
       </ActionButton>
 
       <ActionButton
@@ -63,7 +63,7 @@ const TextSizeController: React.FC = () => {
         disabled={fontSize >= MAX_SIZE}
         className="p-2"
       >
-        <MdOutlineTextIncrease className="w-6 h-6 text-black dark:text-white " />
+        <MdOutlineTextIncrease className="w-6 h-6 text-white " />
       </ActionButton>
     </div>
   );

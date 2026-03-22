@@ -7,6 +7,7 @@ export default [
     route(":lang/home", "pages/home/home.tsx"),
     route(":lang/testpage1", "pages/testpage1/testpage1.tsx"),
     route(":lang/testpage2", "pages/testpage2/testpage2.tsx"),
+    route(":lang/kotsanas", "pages/kotsanas.tsx"),
   ]),
 
 ] satisfies RouteConfig;
