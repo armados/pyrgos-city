@@ -1,87 +1,58 @@
-# Δήμος Πύργου - Κατάκολο - Kiosk
+# Infokiosk για το Λιμάνι Κατακόλου
 
-A modern, production-ready template for building full-stack React applications using React Router.
+## 🏫 Σχολείο
+**1ο Ημερήσιο Γενικό Λύκειο Πύργου**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 📅 Σχολικό Έτος
+2025–2026
 
-## Features
+## 🎓 Συμμετοχή
+Το σχολείο μας συμμετέχει στον **15ο Μαθητικό Φεστιβάλ Ψηφιακής Δημιουργίας**, έναν θεσμό που προάγει τη δημιουργικότητα, τη συνεργασία και την καινοτομία των μαθητών μέσα από την αξιοποίηση των ψηφιακών τεχνολογιών. Το φεστιβάλ αποτελεί μια σημαντική ευκαιρία για τους μαθητές να παρουσιάσουν έργα που συνδυάζουν τη γνώση με την πράξη, αναδεικνύοντας δεξιότητες του 21ου αιώνα.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🔗 https://www.digifest.info/index.php/el/
 
-## Getting Started
+## 💡 Το Έργο
+Η συμμετοχή του σχολείου μας αφορά την ανάπτυξη μιας εφαρμογής **Infokiosk για το Λιμάνι Κατακόλου**.
 
-### Installation
+Το έργο υλοποιήθηκε από τους μαθητές:
+- ΑΑΑΑ  
+- ΒΒΒΒΒ  
 
-Install the dependencies:
+με την καθοδήγηση των υπεύθυνων καθηγητών:
+- Ζούνης Νίκος (ΠΕ86)  
+- Σαργέντης Χρήστος (ΠΕ02)
 
-```bash
-npm install
-```
+## 🖥️ Περιγραφή
+Το Infokiosk αποτελεί ένα διαδραστικό σύστημα παροχής πληροφοριών, σχεδιασμένο για επισκέπτες του λιμανιού Κατακόλου. Η εφαρμογή αναπτύχθηκε ώστε να λειτουργεί **χωρίς απαίτηση σύνδεσης στο Διαδίκτυο**, εξασφαλίζοντας άμεση και αξιόπιστη πρόσβαση σε πληροφορίες.
 
-### Development
+Το Infokiosk υπάρχει ήδη και ανήκει στον Δήμο Πύργου. Οι μαθητές είχαν την ευκαιρία να δουν στην πράξη πώς λειτουργεί ένα σύγχρονο κέντρο πληροφόρησης και να εργαστούν πάνω σε πραγματικό εξοπλισμό.
 
-Start the development server with HMR:
+Στο πλαίσιο του έργου:
+- Μελέτησαν το υφιστάμενο σύστημα Infokiosk
+- Κατανόησαν τη λειτουργία ενός κέντρου πληροφοριών
+- Εγκατέστησαν και παραμετροποίησαν το σύστημα
+- Προσαρμόσαν το περιβάλλον ώστε να εκτελεί τη δική τους εφαρμογή
 
-```bash
-npm run dev
-```
+Η εφαρμογή δοκιμάστηκε στο Infokiosk που είναι εγκατεστημένο στο Λιμάνι Κατακόλου στην Ελλάδα, προσφέροντας μια αυθεντική εμπειρία ανάπτυξης και υλοποίησης.
 
-Your application will be available at `http://localhost:5173`.
+## 🧰 Τεχνολογίες & Εργαλεία
 
-## Building for Production
+### Hardware
+- Raspberry Pi  
+- Οθόνη αφής (Touch Monitor)
 
-Create a production build:
+### Software & Εργαλεία
+- React Router  
+- Tailwind CSS  
+- Visual Studio Code  
+- GitHub  
+- draw.io  
 
-```bash
-npm run build
-```
+## 🎯 Στόχος
+Βασικοί στόχοι του έργου ήταν:
+- Η ανάπτυξη μιας λειτουργικής και φιλικής προς τον χρήστη εφαρμογής
+- Η εξοικείωση των μαθητών με πραγματικά συστήματα πληροφόρησης
+- Η καλλιέργεια δεξιοτήτων προγραμματισμού, σχεδιασμού και συνεργασίας
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+## 🚀 Συμπέρασμα
+Η συμμετοχή στο φεστιβάλ αποτέλεσε μια πολύτιμη εμπειρία για τους μαθητές, καθώς τους έδωσε τη δυνατότητα να εφαρμόσουν τις γνώσεις τους σε ένα πραγματικό περιβάλλον και να συμβάλουν ενεργά στη δημιουργία ενός χρήσιμου ψηφιακού εργαλείου για την τοπική κοινωνία.
