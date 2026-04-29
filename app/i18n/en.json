@@ -5,7 +5,20 @@
     "testpage2": "Test Page 2"
   },
   "home": {
-    "title": "Home page"
+    "title": "Home page",
+    "welcome_title_1": "Your Adventure",
+    "welcome_subtitle_1": "Starts here!",
+    "welcome_intro_1": "Welcome to Katakolo! To help you make the most of your visit, we’ve gathered everything you need in one place.",
+    "bullet1": "Explore",
+    "bullet2": "Relax",
+    "bullet3": "Taste",
+    "bullet4": "Navigate",
+    "box1": "Discover Katakolo Harbor",
+    "box2": "Culture & History",
+    "box3": "Points of Interest",
+    "box4": "Nearby Beaches",
+    "box5": "Flavors & Restaurants",
+    "box6": "Useful Phone Numbers"
   },
   "testpage1": {
     "title": "This is a test page 1"

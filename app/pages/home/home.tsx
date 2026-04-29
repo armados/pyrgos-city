@@ -17,12 +17,12 @@ export default function Home() {
   const { t, i18n } = useTranslation();
 
   const categories = [
-    { title: "Γνωρίστε το Λιμάνι Κατάκολου", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Πολιτισμός & Ιστορία", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Σημεία Ενδιαφέροντος", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Κοντινές Παραλίες", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Γεύσεις & Εστιατόρια", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Χρήσιμα Τηλέφωνα", image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box1"), image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box2"), image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box3"), image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box4"), image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box5"), image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box6"), image: "/images/plakes-01-300x225.jpg" },
 
   ];
 
@@ -41,12 +41,12 @@ export default function Home() {
 
 <div className="max-w-md  ">
   <h1 className="text-4xl font-extrabold text-blue-900 dark:text-blue-300 mb-4">
-    Your Adventure <br/> 
-    <span className="text-cyan-600 dark:text-cyan-400 italic">Starts Here!</span>
+    {t("home.welcome_title_1")}<br/> 
+    <span className="text-cyan-600 dark:text-cyan-400 italic">{t("home.welcome_subtitle_1")}</span>
   </h1>
 
   <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
-    Welcome to Katakolo! To help you make the most of your visit, we’ve gathered everything you need in one place. 
+    {t("home.welcome_intro_1")} 
   </p>
 
   <ul className="space-y-4">
@@ -54,28 +54,28 @@ export default function Home() {
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">Explore</span> our landmarks and local history.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet1")}</span> our landmarks and local history.</p>
     </li>
     
     <li className="flex items-start gap-3">
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">Relax</span> at the best nearby beaches.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet2")}</span> at the best nearby beaches.</p>
     </li>
 
     <li className="flex items-start gap-3">
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">Taste</span> fresh seafood and traditional products.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet3")}</span> fresh seafood and traditional products.</p>
     </li>
 
     <li className="flex items-start gap-3">
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">Navigate</span> with ease using transport and contact info.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet4")}</span> with ease using transport and contact info.</p>
     </li>
   </ul>
 
