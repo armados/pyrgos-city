@@ -24,36 +24,36 @@ export default function PageTitleWithBackButton({ title }: { title: string }) {
   const currentPage = location.pathname.split("/")[2];
 
   return (
-    <div className="flex w-full justify-around border-b-0 border-zinc-300  bg-[#326599]">
+    <div className="flex w-full justify-around border-b-0 border-zinc-300  bg-[#326599] dark:bg-blue-900  ">
 
 
 
       {currentPage == 'home' ?
-      
-              <ActionButton to={`/${lang}/home`} className="inline-flex items-center py-2 px-4 ">
-<img src="../images/logo2.png" alt="Logo" className=" h-full py-0" />
+
+        <ActionButton to={`/${lang}/home`} className="inline-flex items-center py-2 px-4 ">
+          <img src="../images/logo2.png" alt="Logo" className=" h-full py-0" />
         </ActionButton>
 
 
 
 
-: <>
+        : <>
 
 
-        <ActionButton to={`/${lang}/home`} className="inline-flex items-center py-2 px-4 md:px-8">
-          <IoMdHome className="w-6 md:w-8 h-6 md:h-8 text-white" />
-        </ActionButton>
-        
-        <ActionButton
-          onClick={() => navigate(-1)}
-          className="inline-flex items-center py-2 px-4 md:px-8">
-          <IoArrowBackCircleOutline className="w-6 md:w-8 h-6 md:h-8 text-white" />
-        </ActionButton>
+          <ActionButton to={`/${lang}/home`} className="inline-flex items-center py-2 px-4 md:px-8">
+            <IoMdHome className="w-6 md:w-8 h-6 md:h-8 text-white" />
+          </ActionButton>
 
-      </>}
+          <ActionButton
+            onClick={() => navigate(-1)}
+            className="inline-flex items-center py-2 px-4 md:px-8">
+            <IoArrowBackCircleOutline className="w-6 md:w-8 h-6 md:h-8 text-white" />
+          </ActionButton>
+
+        </>}
 
       <div className="flex flex-grow items-center text-white text-xl font-semibold  truncate">
-       
+
       </div>
 
       <div className="flex py-2 px-4 md:px-8 items-center ">

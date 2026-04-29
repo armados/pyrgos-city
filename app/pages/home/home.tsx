@@ -17,11 +17,11 @@ export default function Home() {
   const { t, i18n } = useTranslation();
 
   const categories = [
-    { title: "Η Πόλη μου", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Γνωρίστε το Λιμάνι Κατάκολου", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Πολιτισμός & Ιστορία", image: "/images/plakes-01-300x225.jpg" },
     { title: "Σημεία Ενδιαφέροντος", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Αξιοθέατα", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Παραλίες", image: "/images/plakes-01-300x225.jpg" },
-    { title: "Φαγητό", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Κοντινές Παραλίες", image: "/images/plakes-01-300x225.jpg" },
+    { title: "Γεύσεις & Εστιατόρια", image: "/images/plakes-01-300x225.jpg" },
     { title: "Χρήσιμα Τηλέφωνα", image: "/images/plakes-01-300x225.jpg" },
 
   ];
@@ -37,7 +37,7 @@ export default function Home() {
 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-8xl mx-auto px-4 mt-8">
   
   {/* FIRST COLUMN (1/3 Width) */}
-  <div className="md:col-span-4 bg-white dark:bg-stone-700 rounded-2xl shadow-md p-6 md:p-8">
+  <div className="md:col-span-4 bg-white dark:bg-neutral-700 rounded-2xl shadow-md p-6 md:p-8">
 
 <div className="max-w-md  ">
   <h1 className="text-4xl font-extrabold text-blue-900 dark:text-blue-300 mb-4">
@@ -106,6 +106,7 @@ export default function Home() {
         h-[180px] md:h-[260px] 
        
         shadow
+        dark:shadow-gray-600
       "
           >
             {/* IMAGE CONTAINER */}
@@ -120,8 +121,8 @@ export default function Home() {
             </div>
 
             {/* LABEL BOTTOM BAR */}
-            <div className="absolute bottom-0 w-full bg-[#326599] dark:bg-blue-50 py-3 px-4">
-              <h2 className="text-white dark:text-black text-base md:text-lg font-bold truncate leading-tight">
+            <div className="absolute bottom-0 w-full bg-[#326599] dark:bg-blue-900 py-3 px-4">
+              <h2 className="text-white dark:text-white text-base md:text-lg font-bold truncate leading-tight">
                 {item.title}
               </h2>
             </div>
