@@ -5,6 +5,7 @@ import { IoMdHome } from "react-icons/io";
 import { IoBagHandle } from "react-icons/io5";
 import ActionButton from "./ActionButton";
 
+import { RiSignpostFill } from "react-icons/ri";
 
 
 export default function Navbar() {
@@ -19,19 +20,10 @@ export default function Navbar() {
         <h4 className="hidden md:block">{t("nav.home")}</h4>
       </ActionButton>
 
-      <ActionButton to={`/${lang}/testpage1`} className="inline-flex items-center gap-4 py-2 px-10">
-        <IoBagHandle className="w-6 h-6 text-purple-500" />
-        <h4 className="hidden md:block">{t("nav.testpage1")}</h4>
-      </ActionButton>
-
-      <ActionButton to={`/${lang}/testpage2`} className="inline-flex items-center gap-4 py-2 px-10">
-        <IoBagHandle className="w-6 h-6 text-red-500" />
-        <h4 className="hidden md:block">{t("nav.testpage2")}</h4>
-      </ActionButton>
 
       <ActionButton to={`/${lang}/kotsanas`} className="inline-flex items-center gap-4 py-2 px-10">
-        <IoBagHandle className="w-6 h-6 text-red-500" />
-        <h4 className="hidden md:block">kotsanas</h4>
+        <RiSignpostFill className="w-6 h-6 text-red-500" />
+        <h4 className="hidden md:block">{t("nav.kotsanas")}</h4>
       </ActionButton>
 
     </div>

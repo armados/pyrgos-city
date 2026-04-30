@@ -15,9 +15,9 @@ export default function TestPage2() {
   const { t } = useTranslation();
 
   const photos = [
-    "/images/file1.jpg",
-    "/images/file2.jpg",
-    "/images/file3.jpg",
+    "/images/das-museum.jpg",
+    "/images/mus-kotsanas.jpg",
+    "/images/museum-of-ancient-greek.jpg",
   ];
 
   return (
@@ -28,7 +28,7 @@ export default function TestPage2() {
 
   {/* Background Image */}
   <img
-    src="/images/image1.jpg"
+    src="/images/das-museum.jpg"
     className="w-full h-full object-cover"
   />
 
@@ -67,7 +67,7 @@ export default function TestPage2() {
         <div className="lg:col-span-2 space-y-8">
 
           {/* ABOUT */}
-          <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+          <div className="bg-white dark:bg-neutral-700 rounded-2xl shadow-md p-6 md:p-8">
             <Heading2>About the Museum</Heading2>
 
             <Par className="text-lg leading-relaxed mt-4">
@@ -99,7 +99,7 @@ export default function TestPage2() {
           </div>
 
 {/* QUICK INFO */}
-<div className="bg-white rounded-2xl shadow-md p-6">
+<div className="bg-white dark:bg-neutral-800 rounded-2xl shadow-md p-6">
   <Heading2>Visitor Info</Heading2>
 
   <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
@@ -135,7 +135,7 @@ export default function TestPage2() {
         <div className="space-y-8">
 
           {/* GALLERY */}
-          <div className="bg-white rounded-2xl shadow-md p-6">
+          <div className="bg-white dark:bg-neutral-800 rounded-2xl shadow-md p-6">
             <Heading2>Photo Gallery</Heading2>
 
             <div className="grid grid-cols-2 gap-4 mt-5">

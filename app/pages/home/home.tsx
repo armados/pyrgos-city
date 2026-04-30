@@ -2,11 +2,10 @@ import type { Route } from "../../+types/root";
 import { useTranslation } from "react-i18next";
 import ActionButton from "~/components/ActionButton";
 import KioskPage from "~/components/KioskPage";
+import { useParams } from "react-router";
 
 export const speakText = (text: string, lang: string) => {
-  const msg = new SpeechSynthesisUtterance(text);
-  msg.lang = lang;
-  window.speechSynthesis.speak(msg);
+
 };
 
 export function meta({ }: Route.MetaArgs) {
@@ -14,15 +13,16 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const { lang } = useParams();
   const { t, i18n } = useTranslation();
 
   const categories = [
-    { title: t("home.box1"), image: "/images/plakes-01-300x225.jpg" },
-    { title: t("home.box2"), image: "/images/plakes-01-300x225.jpg" },
-    { title: t("home.box3"), image: "/images/plakes-01-300x225.jpg" },
-    { title: t("home.box4"), image: "/images/plakes-01-300x225.jpg" },
-    { title: t("home.box5"), image: "/images/plakes-01-300x225.jpg" },
-    { title: t("home.box6"), image: "/images/plakes-01-300x225.jpg" },
+    { title: t("home.box1"), image: "/images/katakolo1.jpg" },
+    { title: t("home.box2"), image: "/images/mus-kotsanas.jpg" },
+    { title: t("home.box3"), image: "/images/ancient-olympia1.jpg" },
+    { title: t("home.box4"), image: "/images/beach1.jpg" },
+    { title: t("home.box5"), image: "/images/food1.jpg" },
+    { title: t("home.box6"), image: "/images/katakolo3.jpg" },
 
   ];
 
@@ -54,28 +54,28 @@ export default function Home() {
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet1")}</span> our landmarks and local history.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet1")}</span> {t("home.bullet1text")}</p>
     </li>
     
     <li className="flex items-start gap-3">
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet2")}</span> at the best nearby beaches.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet2")}</span> {t("home.bullet2text")}</p>
     </li>
 
     <li className="flex items-start gap-3">
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet3")}</span> fresh seafood and traditional products.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet3")}</span> {t("home.bullet3text")}</p>
     </li>
 
     <li className="flex items-start gap-3">
       <div className="mt-1 bg-blue-100 p-1 rounded-full">
         <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="5 13l4 4L19 7"></path></svg>
       </div>
-      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet4")}</span> with ease using transport and contact info.</p>
+      <p className="text-slate-700 dark:text-slate-300"><span className="font-bold text-blue-800 dark:text-blue-400">{t("home.bullet4")}</span> {t("home.bullet4text")}</p>
     </li>
   </ul>
 
@@ -100,14 +100,14 @@ export default function Home() {
         {categories.map((item, index) => (
           <ActionButton
             key={index}
-            onClick={() => speakText(item.title, i18n.language)}
             className="
         group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-stone-700
         h-[180px] md:h-[260px] 
-       
+       w-[230px] md:w-[300px]
         shadow
-        dark:shadow-gray-600
+        dark:shadow-black
       "
+       to={`/${lang}/kotsanas`}
           >
             {/* IMAGE CONTAINER */}
             <div className="relative h-full w-full overflow-hidden">
